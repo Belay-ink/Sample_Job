@@ -1,0 +1,50 @@
+
+var ftGUID_6275740="50492944C1A309";
+var ftConfID_6275740="0";
+var ftParams_6275740="ft_custom=af4a267d-ec65-4845-91cf-d47e8405ea28&ftOBA=1&ft_agentEnv=0&ft_lat=32.97&ft_long=-96.79&ft_referrer=https%3A%2F%2Faax-us-east.amazon-adsystem.com%2Fe%2Fdtb%2Fadmi%3Fb%3DIoC5KZr_Hlug1fExed2C-JYAAAF-kvosrAEAAAwLASTjihk%26rnd%3D6667024160221643143378147%26pp%3D1rom6tc%26p%3D1ou8cn4%26crid%3D3658_19988_d16zd0wa%26ep%3D%257B%2522ce%2522%253A%25221%2522%257D&gdpr=0&cachebuster=798832.3688150183&ft_keyword=jouy6pe&ft_section=740586c4-8bab-407a-800b-0f3d37bf396e&ft_c1=PC&ft_c2=2";
+var ftKeyword_6275740="";
+var ftCustom_6275740="af4a267d-ec65-4845-91cf-d47e8405ea28";
+var ftSection_6275740="740586c4-8bab-407a-800b-0f3d37bf396e";
+var ftSegment_6275740="aanx,ag2i,uei,wl7,ahvj,afr5,qdk,qdkdfw,tvq,tvqmsp,qdm,qdmdfw_msp,ubl,ubl8yvvx1w3qvw,uei3000010974,tapDFW_MSP";
+var ftSegmentList_6275740=[{s:'aanx',t:50500000},{s:'ag2i'},{s:'uei'},{s:'wl7',t:51340000},{s:'ahvj'},{s:'afr5'},{m:'6aalvo',s:'qdk'},{m:'6aalvd',s:'qdkdfw'},{m:'6aalvod',s:'tvq'},{m:'6adalvo',s:'tvqmsp'},{m:'6adalvd',s:'qdm'},{m:'6adalvod',s:'qdmdfw_msp'},{s:'ubl'},{m:'ubm_v',s:'ubl8yvvx1w3qvw'},{m:'uei_v',s:'uei3000010974'},{m:'c1777_priceline',s:'tapDFW_MSP'}];
+var ftRuleMatch_6275740="0";
+var ftTimestamp_6275740="1643143524";
+var ftGeoC2_6275740="us";
+var ftGeoState_6275740="tx";
+var ftGeoCity_6275740="dallas";
+var ftISP_6275740="charter communications";
+var ftSpeed_6275740="cable";
+var ftDMA_6275740="623";
+var ftLong_6275740="-96.79";
+var ftLat_6275740="32.97";
+var ftPostal_6275740="75248";
+var ftTimeZone_6275740="-600";
+var ftMobileCarrier_6275740="";
+var ftImp6275740 = {};
+ftImp6275740.privacy = "x";
+ftImp6275740.guidAge = "89";
+ftImp6275740.impID = "64F72877-1B51-D7CC-7AC8-A3ECD07555A8";
+ftImp6275740.duid = "FT:50492944C1A309";
+
+ftImp6275740.ft_tpplid = "";
+ftImp6275740.ft_c = {};
+ftImp6275740.ft_c.ft_c1 = "PC";
+ftImp6275740.ft_c.ft_c2 = "2";
+ftImp6275740.gdpr = "0";
+ftImp6275740.gdpr_consent = "";
+ftImp6275740.gdpr_pd = "";
+ftImp6275740.oob_consent = "";
+ftImp6275740.gdprStoredConsent = "";
+ftImp6275740.us_privacy = "";
+
+ftImp6275740.jsAppend = "1";
+(function(){
+    var tag = document.getElementById('ft_servedby_6275740') || (function(s){
+    	return s[s.length-1];
+    }(document.getElementsByTagName('script'))),
+           js = document.createElement('script');
+    js.src =
+"https://cdn.flashtalking.com/xre/627/6275740/3730774/js/j-6275740-3730774.js";
+    js.id = "ftscript_m6275740";
+    tag.parentNode.insertBefore(js, tag);
+}());

@@ -1,0 +1,205 @@
+// 300x250
+
+function initVars(){
+
+	window.txt1 = exportRoot.txt1;
+	window.oTxt = exportRoot.oTxt;
+	window.oLine = exportRoot.oLine;
+	window.bTxt = exportRoot.bTxt;
+	window.bLine = exportRoot.bLine;
+	window.obTxt = exportRoot.obTxt;
+	window.obLine = exportRoot.obLine;
+	window.txt2 = exportRoot.txt2;
+	window.txt2Scale = txt2.scaleX;
+	gsap.set(txt2, {scaleX:0, scaleY:0});
+	// window.txt2Pos = exportRoot.txt2Pos;
+	// txt2Pos.alpha = 0;
+
+	window.oLogoSet = exportRoot.oLogoSet;
+
+	window.oLogo1 = oLogoSet.logo_o1;
+	window.oLogo2 = oLogoSet.logo_o2;
+	window.oLogo3 = oLogoSet.logo_o3;
+	window.oLogo4 = oLogoSet.logo_o4;
+	window.oLogo5 = oLogoSet.logo_o5;
+	window.oLogo11 = oLogoSet.logo_oAndMore;
+
+	window.bLogoSet = exportRoot.bLogoSet;
+
+	window.bLogo1 = bLogoSet.logo_b1;
+	window.bLogo2 = bLogoSet.logo_b2;
+	window.bLogo3 = bLogoSet.logo_b3;
+	window.bLogo4 = bLogoSet.logo_b4;
+	window.bLogo5 = bLogoSet.logo_b5;
+	window.bLogo11 = bLogoSet.logo_bAndMore;
+
+	window.obLogoSet = exportRoot.obLogoSet;
+
+	window.obLogo1 = obLogoSet.logo_ob1;
+	window.obLogo2 = obLogoSet.logo_ob2;
+	window.obLogo3 = obLogoSet.logo_ob3;
+	window.obLogo4 = obLogoSet.logo_ob4;
+	window.obLogo5 = obLogoSet.logo_ob5;
+	window.obLogo11 = obLogoSet.logo_obAndMore;
+
+	window.offer = exportRoot.offer;
+		// window.colorPop = offer.colorPop;
+
+	window.cta				= exportRoot.cta;
+	window.legal			= exportRoot.legal;
+	window.slingLogo		= exportRoot.slingLogo;
+
+	// end editable vars
+
+	window.loading = document.getElementById("loading");
+
+	initPlayback();
+}
+
+function runGSAP() {
+
+	setTimeout(function(){console.log("15 sec");}, 15000);
+
+	tl = new TimelineLite();
+
+	window.GSAPTimeline = tl;
+
+	console.log("runGSAP");
+
+	window.imgEase = Power3.easeOut;
+	enterEase = Power2.easeOut;
+	exitEase = Power3.easeIn;
+
+	var easeBounce = Back.easeOut.config(2);
+
+	var exitAmt = "-=300";
+
+	// window.exitAmt = -500;
+
+	tl
+
+	.to( loading	, 	0.25,		{	opacity:0	}) // fade out loader
+	.from(	canvas  ,	0.25,		{	opacity:0	})
+
+
+	.from(txt1, enter, {x:xHide, ease:enterEase})
+
+	.from(bTxt, enter, {x:xHide, ease:enterEase}, "bSet")
+	.from(bLine, enter, {x:xHide, ease:enterEase}, "bSet")
+
+	.from(bLogo1, enter, {scaleX:0, ease:enterEase}, "bLogos")
+	.from(bLogo2, enter, {scaleX:0, ease:enterEase}, "bLogos+=0.1")
+	.from(bLogo3, enter, {scaleX:0, ease:enterEase}, "bLogos+=0.2")
+	.from(bLogo4, enter, {scaleX:0, ease:enterEase}, "bLogos+=0.3")
+	.from(bLogo5, enter, {scaleX:0, ease:enterEase}, "bLogos+=0.4")
+	.from(bLogo11, enter, {scaleX:0, ease:enterEase}, "bLogos+=0.6")
+
+	.to(bLogoSet, 1.75, {})
+
+	.to(bTxt, exit, {x:xHide, ease:exitEase}, "bExit")
+	.to(bLine, exit, {x:xHide, ease:exitEase}, "bExit")
+	.to(bLogoSet, exit, {x:xHide, ease:exitEase}, "bExit")
+
+	.from(oTxt, enter, {x:xHide, ease:enterEase}, "oSet")
+	.from(oLine, enter, {x:xHide, ease:enterEase}, "oSet")
+
+	.from(oLogo1, enter, {scaleX:0, ease:enterEase}, "oLogos")
+	.from(oLogo2, enter, {scaleX:0, ease:enterEase}, "oLogos+=0.1")
+	.from(oLogo3, enter, {scaleX:0, ease:enterEase}, "oLogos+=0.2")
+	.from(oLogo4, enter, {scaleX:0, ease:enterEase}, "oLogos+=0.3")
+	.from(oLogo5, enter, {scaleX:0, ease:enterEase}, "oLogos+=0.4")
+	.from(oLogo11, enter, {scaleX:0, ease:enterEase}, "oLogos+=0.6")
+
+	.to(oLogoSet, 1.75, {})
+
+	.to(oTxt, exit, {x:xHide, ease:exitEase}, "oExit")
+	.to(oLine, exit, {x:xHide, ease:exitEase}, "oExit")
+	.to(oLogoSet, exit, {x:xHide, ease:exitEase}, "oExit")
+
+
+	.from(obTxt, enter, {x:xHide, ease:enterEase}, "obSet")
+	.from(obLine, enter, {x:xHide, ease:enterEase}, "obSet")
+
+	.from(obLogo1, enter, {scaleX:0, ease:enterEase}, "obLogos")
+	.from(obLogo2, enter, {scaleX:0, ease:enterEase}, "obLogos+=0.1")
+	.from(obLogo3, enter, {scaleX:0, ease:enterEase}, "obLogos+=0.2")
+	.from(obLogo4, enter, {scaleX:0, ease:enterEase}, "obLogos+=0.3")
+	.from(obLogo5, enter, {scaleX:0, ease:enterEase}, "obLogos+=0.4")
+	.from(obLogo11, enter, {scaleX:0, ease:enterEase}, "obLogos+=0.6")
+
+	.to(obLogoSet, 1.75, {})
+
+	.to(obTxt, exit, {x:xHide, ease:exitEase}, "obExit")
+	.to(obLine, exit, {x:xHide, ease:exitEase}, "obExit")
+	.to(obLogoSet, exit, {x:xHide, ease:exitEase}, "obExit")
+	.to(txt1, exit, {x:xHide, ease:exitEase}, "obExit")
+
+	.to(txt2, enter, {scale:txt2Scale*0.9, ease:Linear.easeNone}, "tv+=0.1")
+	.to(txt2, 1, {scale:txt2Scale, ease:Linear.easeNone})
+
+	// .to(txt2, enter, {x:txt2Pos.x, y:txt2Pos.y, scale:txt2Pos.scale, ease:Power2.easeInOut})
+
+	// .from(offer, enter, {scale:0, ease:enterEase})
+
+	// colorPop
+
+	// .add (function(){
+	// 	console.log(colorPop.shape.graphics._fill.style);
+	// 	colorPop.shape.graphics._fill.style = "#FFA300"; 
+	// })
+
+	// .to(colorPop, 0.1, {scale:"+=0.1", yoyo:true, repeat:1, ease:enterEase})
+
+
+	.add(function(){	slingLogo.gotoAndPlay("wave");	}, "wave")
+	.to(cta, 0.25, {scaleX:"+=0.1", scaleY:"+=0.1", yoyo:true, repeat:1, ease:exitEase, delay:0.25})
+
+	;
+
+}
+
+
+function initPlayback() {
+
+	stage = new createjs.Stage(canvas);
+	stage.addChild(exportRoot);
+	stage.update();
+
+	createjs.Ticker.timingMode = createjs.Ticker.RAF_SYNCHED; //AdHelper.js
+
+	createjs.Ticker.setFPS(lib.properties.fps);
+	createjs.Ticker.addEventListener("tick", stage);
+
+	exportRoot.gotoAndStop(0);
+
+	runGSAP();
+}
+
+var tl;
+
+var initDelay 	= 0.25; // hide initial flash of content until gsap positions everything
+var pause 		= 1.25;
+var enter 		= 0.25;
+var exit 		= 0.25;
+
+var enterEase 	= Elastic.easeOut.config(0.75,0.5);
+var exitEase 	= Back.easeIn.config(2);
+
+var xHide = -350;
+var xHideRight = 455;
+var yHide = -5;
+
+
+function contCanvas() {
+	exportRoot.play();
+}
+
+function contGSAP() {
+	tl.resume();
+}
+
+function pauseGSAP() {
+	tl.pause();
+	setTimeout(contGSAP, (pause * 3000));
+}
+

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)https://cdn.flashtalking.com/141976/3730774/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<style></style>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="ad.size" content="width=300,height=250">
+		<title>SlingTV 300x250 | </title>
+		<link rel="stylesheet" type="text/css" href="./css-reset.css">
+		<link rel="stylesheet" type="text/css" href="./style.css">
+
+		<script src="./gsap.min.js(1).download"></script>
+		<script src="./EasePack.min.js.download"></script>
+
+		<script src="./createjs.min.js.download"></script>
+		<script src="./300x250.js.download"></script>
+
+		<script>
+		var canvas, stage, exportRoot;
+		var loaderFlag = false;
+
+		function initLoad() {
+
+			canvas = document.getElementById("canvas");
+
+			if (lib.properties.manifest.length > 0){
+				images = images||{};
+				var loader = new createjs.LoadQueue(false);
+				loader.addEventListener("fileload", handleFileLoad);
+				loader.addEventListener("complete", handleComplete);
+				loader.loadManifest(lib.properties.manifest);
+			} else {
+				loaderFlag = true;
+				exportRoot = new lib._300x250();
+				exportRoot.scaleX = exportRoot.scaleY = 2;
+				// initVars();
+			}
+		}
+
+		function handleFileLoad(evt) {
+			if (evt.item.type == "image") { images[evt.item.id] = evt.result; }
+		}
+
+		function handleComplete(evt) {
+			loaderFlag = true;
+			exportRoot = new lib._300x250();
+			exportRoot.scaleX = exportRoot.scaleY = 2;
+			// initVars();
+		}
+
+		function checkLoad(){
+			if (loaderFlag===true){
+				initVars();
+			} else {
+				//ad not fully loaded, check again in .25 seconds
+				setTimeout(checkLoad,250);
+			}
+		}
+
+		</script>
+
+	</head>
+
+	<body data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="">
+
+		<div id="ad" style="cursor: pointer;">
+
+			<div id="canvasHolder"><canvas id="canvas" width="600" height="500" style="opacity: 1;"></canvas></div>
+			<div id="loading" style="opacity: 0;"></div>
+			<div id="border"></div>
+
+		</div><!-- ad -->
+
+		<script src="./anim.js.download"></script>
+		<script src="./html5API.js.download"></script>
+
+		<script type="text/javascript">
+			container = myFT.$("#ad");
+			myFT.applyClickTag(container, 1);
+
+			myFT.on('ready', function(){
+				myFT.require(['anim.js'], function(){
+					initLoad();
+				});
+			});
+
+			//ignore adVisibility when previewing in Creative Manager
+			var started=false;
+			var adURL=window.location.href;
+  			substring = "creativepreview";
+
+			// PLAY ANIMATION IF: if 85% in view OR viewing locally in browser OR viewing in Creative Preview (Test in Adserve)
+  			if (85 <= myFT.visibility.percentInView || window == top || adURL.indexOf(substring) !== -1) {
+    			started=true;
+        		checkLoad();
+  			} else {
+    			myFT.on('visibilityupdate', function (e) {
+					if (e.percentInView >= 85) {
+        				if (!started) {
+        						started=true;
+          						checkLoad();
+
+          						myFT.off('visibilityupdate');
+        				}
+      				}
+    			});
+  			}
+
+		</script>
+
+	
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>

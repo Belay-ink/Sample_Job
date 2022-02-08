@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://s0.2mdn.net/10979677/1638537647943/728x90/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0">
+    <meta name="ad.size" content="width=728, height=90">
+	<title>Neutrogena - 2021 - Rapid Firming - Collagen Serum - 728x90</title>
+    
+<style>
+body{
+	padding:0; 
+	margin:0;
+}
+#demo {
+	width: 728px;
+	height: 90px;
+	background-color: #fff;
+	padding: 0px;
+	overflow:hidden; 
+	position:relative;
+	visibility: hidden;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 1px solid #999;
+}
+.showMe {
+	visibility: visible !important;
+}
+#bkrd_white {
+	position: absolute;
+    width: 728px;
+	height: 90px;
+	background-color: #fff;
+}
+#bkrd {
+	position: absolute;
+    width: 728px;
+	height: 90px;
+	background: url(bkrd.jpg) no-repeat;
+}
+#bkrd_darken {
+	position: absolute;
+    width: 728px;
+	height: 90px;
+	background-color: #000;
+}
+#bkrd2 {
+	position: absolute;
+    width: 728px;
+	height: 90px;
+	background: url(bkrd2.jpg) no-repeat;
+}
+#logo_neutrogena {
+	position: absolute;
+    width: 135px;
+	height: 28px;
+	background: url(logo_neutrogena.svg) no-repeat;
+}
+#txt1a {
+	position: absolute;
+    width: 276px;
+	height: 24px;
+	background: url(txt1a.svg) no-repeat;
+}
+#txt1b {
+	position: absolute;
+    width: 213px;
+	height: 15px;
+	background: url(txt1b.svg) no-repeat;
+}
+#txt2a {
+	position: absolute;
+    width: 156px;
+	height: 15px;
+	background: url(txt2a.svg) no-repeat;
+}
+#txt2b {
+	position: absolute;
+    width: 368px;
+	height: 25px;
+	background: url(txt2b.svg) no-repeat;
+}
+#footer {
+	position: absolute;
+    width: 152px;
+	height: 92px;
+	background: url(footer.svg) no-repeat;
+}
+#footer_copy {
+	position: absolute;
+    width: 87px;
+	height: 26px;
+	background: url(footer_copy.svg) no-repeat;
+}
+#product {
+	position: absolute;
+    width: 154px;
+	height: 90px;
+	background: url(product.png) no-repeat;
+}
+#legal {
+	position: absolute;
+    width: 50px;
+	height: 7px;
+	background: url(legal.svg) no-repeat;
+}
+#legal2 {
+	position: absolute;
+    width: 116px;
+	height: 9px;
+	background: url(legal2.svg) no-repeat;
+}
+#legal3 {
+	position: absolute;
+    width: 129px;
+	height: 17px;
+	background: url(legal3.svg) no-repeat;
+}
+#btn_cta {
+	position: absolute;
+    width: 99px;
+	height: 27px;
+	background: url(btn_cta.svg) no-repeat;
+}
+#btn {
+    position: absolute;
+	display:block;
+	cursor: pointer;
+    width: 728px;
+	height: 90px;
+	left: 0px;
+	top: 0px;
+}
+#replay {
+    position: absolute;
+	cursor: pointer;
+    width: 40px;
+	height:25px;
+	border:none;
+	background: url(replay.svg) no-repeat;
+}
+</style>
+<script type="text/javascript">
+    
+  (function() {
+    var MAX_URL_PARAM_LENGTH = 34;
+    var CLICK_X_URL_KEY = 'nx';
+    var CLICK_Y_URL_KEY = 'ny';
+    var CREATIVE_DIMENSIONS_KEY = 'dim';
+    var AD_URL_PARAM = '&adurl=';
+
+    var relegateNavigation = '';
+    var urlParamMap = {};
+
+    urlParamMap[CLICK_X_URL_KEY] = null;
+    urlParamMap[CLICK_Y_URL_KEY] = null;
+    urlParamMap[CREATIVE_DIMENSIONS_KEY] = null;
+
+    var handleClickTagMessage = function(e) {
+      try {
+        var eventData = JSON.parse(e.data);
+      } catch (err) {
+        return;
+      }
+      if (eventData.isInitClickTag) {
+        if (eventData.clickTags) {
+          for (var i = 0; i < eventData.clickTags.length; i++) {
+            var clkTag = eventData.clickTags[i];
+            window[clkTag.name] = clkTag.url;
+          }
+        } else if (eventData.clickTag) {
+          window.clickTag = eventData.clickTag;
+        }
+        relegateNavigation = eventData.relegateNavigation;
+      }
+    };
+
+    var storeClickCoordinates = function(e) {
+      urlParamMap[CLICK_X_URL_KEY] = Math.round(e.clientX);
+      urlParamMap[CLICK_Y_URL_KEY] = Math.round(e.clientY);
+    };
+
+    var getCreativeDimensions = function() {
+      return window.innerWidth + 'x' + window.innerHeight;
+    }
+
+    var getExitClickParams = function(e) {
+      urlParamMap[CREATIVE_DIMENSIONS_KEY] = getCreativeDimensions();
+
+      var exitParams = '';
+      for (var key in urlParamMap) {
+        exitParams += '&' + key + '=';
+        if (urlParamMap[key] !== null) {
+          exitParams += urlParamMap[key];
+        }
+      }
+      return exitParams;
+    }
+
+    var appendExitClickParams = function(url) {
+      var adUrlIndex = url.toLowerCase().indexOf(AD_URL_PARAM);
+      var paramsToBeAdded = getExitClickParams();
+      if (adUrlIndex > -1 && paramsToBeAdded.length <= MAX_URL_PARAM_LENGTH) {
+        url = url.substr(0, adUrlIndex) + paramsToBeAdded +
+          url.substr(adUrlIndex);
+      };
+      return url;
+    };
+
+    if (open.call) {
+      window.open = function(open) {
+        return function(url, name, features) {
+          url = appendExitClickParams(url);
+          if (relegateNavigation === 'parent') {
+            var message = {'clickTag': url, 'isPostClickTag': true};
+            parent.postMessage(JSON.stringify(message), '*');
+          } else {
+            var args = [url, name];
+            if (features) {
+              args.push(features);
+            }
+            open.apply(window, args);
+          }
+        };
+      }(window.open);
+    }
+
+    if (window.addEventListener) {
+      window.addEventListener(
+          'message', handleClickTagMessage, false);
+      window.addEventListener('mousedown', storeClickCoordinates, true);
+    } else {
+      window.attachEvent('onmessage', handleClickTagMessage);
+    }
+  })();
+    
+  </script></head>
+
+<body data-new-gr-c-s-check-loaded="14.1046.0" data-gr-ext-installed="">
+<div id="demo" class="showMe">
+	<div id="bkrd_white" style="transform: translate(0px, 0px); opacity: 1;"></div>
+	<div id="bkrd" style="transform: translate(0px, 0px); opacity: 1;"></div>
+	<div id="txt1a" style="transform: translate(14px, 42px); opacity: 1;"></div>
+	<div id="txt1b" style="transform: translate(14px, 68px); opacity: 1;"></div>
+	<div id="bkrd2" style="transform: translate(0px, 0px); opacity: 1;"></div>
+	<div id="bkrd_darken" style="transform: translate(0px, 0px); opacity: 0.1;"></div>
+	<div id="txt2a" style="transform: translate(14px, 42px); opacity: 1;"></div>
+	<div id="txt2b" style="transform: translate(14px, 59px); opacity: 1;"></div>
+	<div id="logo_neutrogena" style="transform: translate(14px, 8px); opacity: 1;"></div>
+	<div id="product" style="transform: translate(476px, 0px); opacity: 1;"></div>
+	<div id="footer" style="transform: translate(577px, 0px); opacity: 1;"></div>
+	<div id="footer_copy" style="transform: translate(592px, 4px); opacity: 1;"></div>
+	<div id="legal" style="transform: translate(591px, 80px); opacity: 1;"></div>
+	<div id="legal2" style="transform: translate(588px, 71px); opacity: 0;"></div>
+	<div id="legal3" style="transform: translate(589px, 62px); opacity: 1;"></div>
+	<div id="btn_cta" style="transform: translate(591px, 32px); opacity: 1;"></div>
+	<!--- The following creates the clickTag call on the button element-->
+	<a href="javascript:window.open(window.clickTag)"><div id="btn" border="0" style="opacity: 0;"></div></a>
+	<div id="replay" style="transform: translate(688px, 0px) scale(0.6, 0.6); opacity: 0.5; visibility: inherit;"></div>  
+</div>
+
+<!--- The following scripts are necessary to execute tweens on CSS properties -->
+<script src="./gsap.min.js.download"></script>
+
+<script type="text/javascript">var clickTag = "";</script>
+
+<script type="text/javascript">
+	
+/* REPLAY BUTTON CONTROLLER */
+document.getElementById("replay").onclick = function() { replayMovie(); }
+
+/* ANIMATION CONTROLLERS */
+
+window.onload = function() {
+
+	var d = document.getElementById("demo");
+	d.className = d.className + "showMe";
+	init();
+}
+
+////////////// Declare Asset Variables ///////////////////////////
+var init = function() {
+	var bkrd_white = document.getElementById("bkrd_white"),
+		bkrd = document.getElementById("bkrd"),
+		bkrd_darken = document.getElementById("bkrd_darken"),
+		bkrd2 = document.getElementById("bkrd2"),
+		logo_neutrogena = document.getElementById("logo_neutrogena"),
+		txt1a = document.getElementById("txt1a"),
+		txt1b = document.getElementById("txt1b"),
+		txt2a = document.getElementById("txt2a"),
+		txt2b = document.getElementById("txt2b"),
+		product = document.getElementById("product"),
+		footer = document.getElementById("footer"),
+		footer_copy = document.getElementById("footer_copy"),
+		legal = document.getElementById("legal"),
+		legal2 = document.getElementById("legal2"),
+		legal3 = document.getElementById("legal3"),
+		btn_cta = document.getElementById("btn_cta"),
+		btn = document.getElementById("btn"),
+		replay = document.getElementById("replay"),
+		tl_setUp,
+		tl_ani1,
+		tl_ani2,
+		tl_replay;
+	
+	////////////// Set original state of each asset //////////////////////		
+	var tl_setup = gsap.timeline();
+
+		tl_setup.set(replay, {autoAlpha:0, x:688, y:0, scaleX:.6, scaleY:.6})
+				.set(bkrd_white, {alpha:1, x:0, y:0})
+				.set(bkrd, {alpha:1, x:0, y:0})
+				.set(bkrd_darken, {alpha:0, x:0, y:0})
+				.set(bkrd2, {alpha:0, x:0, y:605})
+				.set(logo_neutrogena, {alpha:1, x:14, y:8})
+				.set(txt1a, {alpha:0, x:14, y:62, scaleX:1, scaleY:1})
+				.set(txt1b, {alpha:0, x:14, y:88, scaleX:1, scaleY:1})
+				.set(txt2a, {alpha:0, x:14, y:62, scaleX:1, scaleY:1})
+				.set(txt2b, {alpha:0, x:14, y:79, scaleX:1, scaleY:1})
+				.set(footer, {alpha:1, x:577, y:0, scaleX:1, scaleY:1})
+				.set(footer_copy, {alpha:1, x:592, y:4, scaleX:1, scaleY:1})
+				.set(product, {alpha:0, x:476, y:95, scaleX:1, scaleY:1})
+				.set(legal, {alpha:1, x:591, y:80, scaleX:1, scaleY:1})
+				.set(legal2, {alpha:1, x:588, y:71, scaleX:1, scaleY:1})
+				.set(legal3, {alpha:0, x:589, y:62, scaleX:1, scaleY:1})
+				.set(btn_cta, {alpha:1, x:591, y:32, scaleX:1, scaleY:1})
+				.set(btn, {alpha:0});
+		
+////////////// Once assets are set, then call animation 1 (ani1) //////////////////////
+		gsap.delayedCall (.1, ani1);
+}
+
+function ani1() {
+	
+	var tl_ani1 = gsap.timeline();
+	
+	tl_ani1.to(txt1a, {duration:1, alpha:1, y:42, scaleX:1, scaleY:1, ease:Power4.easeOut}, 0)
+			.to(txt1b, {duration:1, alpha:1, y:68, scaleX:1, scaleY:1, ease:Power4.easeOut}, "-=.9");
+		
+		gsap.delayedCall (2.2, ani2);
+}
+	
+function ani2() {
+	
+	var tl_ani2 = gsap.timeline();
+	
+	tl_ani2.to(bkrd2, {duration:1.5, alpha:1, y:0, ease:Power4.easeOut}, 0)
+			.to(bkrd_darken, {duration:1.5, alpha:.1}, 0)
+			.to(legal3, {duration:1.5, alpha:1}, 0)
+			.to(product, {duration:1.5, alpha:1, y:0, ease:Power4.easeOut}, "-=.9")
+			.to(legal2, {duration:1, alpha:0}, 0)
+			.to(txt2a, {duration:1, alpha:1, y:42, scaleX:1, scaleY:1, ease:Power4.easeOut}, "-=.7")
+			.to(txt2b, {duration:1, alpha:1, y:59, scaleX:1, scaleY:1, ease:Power4.easeOut}, "-=.9")
+			.to(btn_cta, {duration:.4, scaleX:.95, scaleY:.95})
+			.to(btn_cta, {duration:.4, scaleX:1, scaleY:1})
+			.to(replay, {duration:1, autoAlpha:.5}, "+=.25");
+}
+
+function replayMovie() {
+	
+	var tl_replay = gsap.timeline();
+	
+	tl_replay.set(replay, {autoAlpha:0, x:688, y:0, scaleX:.6, scaleY:.6})
+			.set(bkrd_white, {alpha:1, x:0, y:0})
+			.set(bkrd, {alpha:1, x:0, y:0})
+			.set(bkrd_darken, {alpha:0, x:0, y:0})
+			.set(bkrd2, {alpha:0, x:0, y:605})
+			.set(logo_neutrogena, {alpha:1, x:14, y:8})
+			.set(txt1a, {alpha:0, x:14, y:62, scaleX:1, scaleY:1})
+			.set(txt1b, {alpha:0, x:14, y:88, scaleX:1, scaleY:1})
+			.set(txt2a, {alpha:0, x:14, y:62, scaleX:1, scaleY:1})
+			.set(txt2b, {alpha:0, x:14, y:79, scaleX:1, scaleY:1})
+			.set(footer, {alpha:1, x:577, y:0, scaleX:1, scaleY:1})
+			.set(footer_copy, {alpha:1, x:592, y:4, scaleX:1, scaleY:1})
+			.set(product, {alpha:0, x:476, y:95, scaleX:1, scaleY:1})
+			.set(legal, {alpha:1, x:591, y:80, scaleX:1, scaleY:1})
+			.set(legal2, {alpha:1, x:588, y:71, scaleX:1, scaleY:1})
+			.set(legal3, {alpha:0, x:589, y:62, scaleX:1, scaleY:1})
+			.set(btn_cta, {alpha:1, x:591, y:32, scaleX:1, scaleY:1})
+			.set(btn, {alpha:0});
+	
+	gsap.delayedCall (0, ani1);
+}
+
+</script>
+
+
+</body><grammarly-desktop-integration data-grammarly-shadow-root="true"></grammarly-desktop-integration></html>
